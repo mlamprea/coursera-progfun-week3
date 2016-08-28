@@ -26,23 +26,23 @@ class TweetSetSuite extends FunSuite {
 
   def size(set: TweetSet): Int = asSet(set).size
 
-/*
-  test("show filter about user a") {
-    new TestSets {
-      val tweetsOfA = set5.filter(tweet => tweet.user == "a")
-      println
-      println(tweetsOfA)
-    }
-  }
 
-  test("show filter of tweets have 20 retweets") {
-    new TestSets {
-      val tweetsOfA = set5.filter(tweet => tweet.retweets == 20)
-      println
-      println(tweetsOfA)
-    }
-  }
-*/
+//  test("show filter about user a") {
+//    new TestSets {
+//      val tweetsOfA = set5.filter(tweet => tweet.user == "a")
+//      println
+//      println(tweetsOfA)
+//    }
+//  }
+
+//  test("show filter of tweets have 20 retweets") {
+//    new TestSets {
+//      val tweetsOfA = set5.filter(tweet => tweet.retweets == 20)
+//      println
+//      println(tweetsOfA)
+//    }
+//  }
+
 
   test("filter: on empty set") {
     new TestSets {
@@ -80,13 +80,13 @@ class TweetSetSuite extends FunSuite {
       assert(size(set1.union(set5)) === 4)
     }
   }
-  /*
-       test("descending: set5") {
-         new TestSets {
-           val trends = set5.descendingByRetweet
-           assert(!trends.isEmpty)
-           assert(trends.head.user == "a" || trends.head.user == "b")
-         }
-       }*/
+
+  test("descending: set5") {
+    new TestSets {
+      val trends = set5.descendingByRetweet
+      assert(!trends.isEmpty)
+      assert(trends.head.user == "a" || trends.head.user == "b")
+    }
+  }
 
 }
